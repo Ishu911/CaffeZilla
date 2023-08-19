@@ -1,0 +1,48 @@
+<% layout("/layout/Boilerplate") %>
+    <div class="row">
+        <h4 class="text-center">New Cafe</h4>
+        <div class="col-md-6 offset-md-3">
+            <form action="/cafes" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-lable" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" required>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-lable" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="">Upload Images</label>
+                    <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Choose images</span>
+                        <span class="form-file-button">Browse</span>
+                    </label></div>
+                </div>
+        
+
+                <div class="mb-3">
+                    <label class="form-lable" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]"
+                        required></textarea>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Cafe</button>
+                </div>
+            </form>
+            <a href="/cafes">All Cafes</a>
+        </div>
+    </div>
